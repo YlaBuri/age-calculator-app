@@ -1,0 +1,9 @@
+.reusltado{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.reusltado label{
+    margin: 10px 0;
+}
