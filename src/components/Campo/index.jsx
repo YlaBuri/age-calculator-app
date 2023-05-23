@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Campo.module.css'
 
-export default function Campo({type = 'number', label, placeholder, valor, aoAlterado, obrigatorio=false}) {
+export default function Campo({type = 'number', label, placeholder, valor, aoAlterado, obrigatorio=false, nome, handleChange}) {
     const placeholderModificada = placeholder
 
     /* let valor ='Teste' */
@@ -13,14 +13,19 @@ export default function Campo({type = 'number', label, placeholder, valor, aoAlt
         
     }
 
+    const validar = (evento) =>{
+        handleChange(evento)
+    }
+
     return(
         <div className={styles.campo}>
             <label>{label}</label>
             <input 
+                name={nome}
                 type={type} 
                 value={valor} 
                 onChange={aoDigitado} 
-                required={obrigatorio} 
+                onBlur={validar}
                 placeholder={placeholderModificada}
             />
         </div>

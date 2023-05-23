@@ -10,7 +10,7 @@
     font-family: "PoppinsExtraBoldItalic";
     font-weight: bold;
     font-size: 68px;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 10px 0;
 }
 

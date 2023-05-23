@@ -16,21 +16,22 @@ export default function Inicio() {
     const diaAtual = dataAtual.getDate();
     const mesAtual = dataAtual.getMonth() + 1; // Os meses são indexados de 0 a 11
     const anoAtual = dataAtual.getFullYear();
-
+  
     let idadeAnos = anoAtual - year;
     let idadeMeses = mesAtual - month;
     let idadeDias = diaAtual - day;
-
-   
+  
+      // Verifica se o dia de nascimento é posterior ao dia atual
     if (idadeMeses < 0 || (idadeMeses === 0 && idadeDias < 0)) {
       idadeAnos--;
-      if (idadeMeses < 0) {
-        idadeMeses = 12 + idadeMeses;
-      }
-      if (idadeDias < 0) {
-        const ultimoDiaMesAnterior = new Date(anoAtual, mesAtual - 1, 0).getDate();
-        idadeDias = ultimoDiaMesAnterior + idadeDias;
-      }
+      idadeMeses += 12;
+    }
+
+    // Verifica se o mês de nascimento é posterior ao mês atual
+    if (idadeDias < 0) {
+      const ultimoDiaMesAnterior = new Date(anoAtual, mesAtual - 1, 0).getDate();
+      idadeDias += ultimoDiaMesAnterior;
+      idadeMeses--;
     }
 
     console.log(`resultado: ${idadeAnos} anos, ${idadeMeses} meses, ${idadeDias} dias`)

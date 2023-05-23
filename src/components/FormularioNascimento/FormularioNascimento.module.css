@@ -10,7 +10,7 @@
 .campos{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .campos > *{
@@ -19,7 +19,7 @@
 
 .divBotao{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .formulario button{
@@ -29,4 +29,16 @@
     height: 80px;
     background-color: #000;
     border-radius: 50%;
+}
+
+.formulario button:hover{
+    background-color: hsl(259, 100%, 65%);;
+}
+
+.error{
+    color: red;
+    font-family: "PoppinsRegular";
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 13px
 }
