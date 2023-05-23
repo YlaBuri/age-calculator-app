@@ -1,21 +1,21 @@
 import React from 'react'
 import styles from './Resultado.module.css'
 
-export default function Resultado() {
+export default function Resultado({resultDay, resultMonth, resultYear}) {
   return (
     <div className={styles.reusltado}>
         
         <label>
-          -- years
+          {resultYear} years
         </label>
         <label>
 
-        -- months
+        {resultMonth} months
         </label>
 
         <label>
 
-        -- days
+        {resultDay} days
         </label>
     </div>
   )
