@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  
+}
+/* styles.css */
+
+.body-height {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -15,6 +23,14 @@
   font-family: "PoppinsBold";
   src: local("PoppinsBold"),
   url("assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsExtraBoldItalic";
+  src: local("PoppinsExtraBoldItalic"),
+  url("assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }

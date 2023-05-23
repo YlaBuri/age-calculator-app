@@ -5,18 +5,20 @@ export default function Resultado({resultDay, resultMonth, resultYear}) {
   return (
     <div className={styles.reusltado}>
         
-        <label>
-          {resultYear} years
-        </label>
-        <label>
+        <div className={styles.labelResultado}> 
+          <div className={styles.valorResultado}>{resultYear} </div>
+          years
+        </div>
 
-        {resultMonth} months
-        </label>
+        <div className={styles.labelResultado}>
+          <div className={styles.valorResultado}>{resultMonth}</div> 
+          months
+        </div>
 
-        <label>
-
-        {resultDay} days
-        </label>
+        <div className={styles.labelResultado}> 
+          <div className={styles.valorResultado}>{resultDay} </div>
+          days
+        </div>
     </div>
   )
 }

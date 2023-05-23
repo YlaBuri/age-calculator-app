@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FormularioNascimento from 'components/FormularioNascimento'
 import Resultado from 'components/Resultado'
 import React from 'react'
-
+import styles from './Inicio.module.css'
 
 export default function Inicio() {
 
@@ -11,7 +11,6 @@ export default function Inicio() {
   const[idadeYear, setIdadeYear] = useState('--');
 
   const calcularData=(day, month, year)=>{
-    /* console.log("calcular") */
 
     const dataAtual = new Date();
     const diaAtual = dataAtual.getDate();
@@ -41,13 +40,15 @@ export default function Inicio() {
   }
 
   return (
-    <div>
+    <div className={styles.content}>
         
+        <div className={styles.container}>
+          <FormularioNascimento calcularData={calcularData}/>
 
-        <FormularioNascimento calcularData={calcularData}/>
-        <Resultado resultDay={idadeDay} resultMonth={idadeMonth} resultYear={idadeYear}/>
-        
-        <footer class="attribution">
+          <Resultado resultDay={idadeDay} resultMonth={idadeMonth} resultYear={idadeYear}/>
+        </div>
+
+        <footer className="attribution">
             Challenge by <a  rel="noreferrer" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="https://www.github.com/YlaBuri">Yla</a>.
         </footer>

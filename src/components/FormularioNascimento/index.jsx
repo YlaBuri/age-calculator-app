@@ -21,20 +21,24 @@ export default function FormularioNascimento({calcularData}) {
 
     return (
         <section >
-            <form className={styles.formulario} onSubmit={aoEnviar}>
-                <Campo obrigatorio={true} label="Day" placeholder="DD"
-                valor={day}
-                aoAlterado={valor => setDay(valor)}/>
+            <form  onSubmit={aoEnviar} className={styles.formulario}>
+                <div className={styles.campos}>
+                    <Campo obrigatorio={true} label="DAY" placeholder="DD"
+                    valor={day}
+                    aoAlterado={valor => setDay(valor)}/>
 
-                <Campo obrigatorio={true} label="Month" placeholder="MM"
-                valor={month}
-                aoAlterado={valor => setMonth(valor)}/>
+                    <Campo obrigatorio={true} label="MONTH" placeholder="MM"
+                    valor={month}
+                    aoAlterado={valor => setMonth(valor)}/>
 
-                <Campo obrigatorio={true} label="Year" placeholder="YYYY"
-                valor={year}
-                aoAlterado={valor => setYear(valor)}/>
+                    <Campo obrigatorio={true} label="YEAR" placeholder="YYYY"
+                    valor={year}
+                    aoAlterado={valor => setYear(valor)}/>
+                </div>
+                <div className={styles.divBotao}>
 
-                <button><IconArrow/></button>
+                    <button className={styles.botao}><IconArrow/></button>
+                </div>
             </form>
             
         </section>

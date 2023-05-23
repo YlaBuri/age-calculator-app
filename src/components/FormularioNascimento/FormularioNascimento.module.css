@@ -1,5 +1,32 @@
 .formulario{
     display: flex;
+    flex-direction: column;
+}
+
+.formulario > *{
+    margin: 10px 0;
+}
+
+.campos{
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
+}
+
+.campos > *{
+    margin: 0px 20px;
+}
+
+.divBotao{
+    display: flex;
+    justify-content: end;
+}
+
+.formulario button{
+    cursor: pointer;
+    border: none;
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 50%;
 }
