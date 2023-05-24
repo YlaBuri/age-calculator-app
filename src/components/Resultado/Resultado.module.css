@@ -6,7 +6,7 @@
 
 .labelResultado{
     display: flex;
-    margin: 5px 2px;
+    
     font-family: "PoppinsExtraBoldItalic";
     font-weight: bold;
     font-size: 68px;
@@ -17,4 +17,16 @@
 .valorResultado{
     color: hsl(259, 100%, 65%);
     margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .labelResultado{
+        margin: 5px 0;
+        font-size: 50px;
+        justify-content: center;
+    }
+
+    .reusltado{
+        padding: 0 10px;
+    }
 }

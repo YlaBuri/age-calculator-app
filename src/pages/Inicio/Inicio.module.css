@@ -15,7 +15,10 @@
 }
 
 @media (max-width: 768px) {
-
+    .container{
+        margin-top: 5%;
+        justify-content: space-around;
+    }
     .container{
         max-width: 300px;
     }
